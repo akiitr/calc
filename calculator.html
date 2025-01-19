@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/calculator.css">
 </head>
 <body>
-    <header>
-        <h1>Scientific Calculator</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- Add more links as needed -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="calculator">
-            <div id="display">0</div>
-            <div class="buttons">
-                <!-- Calculator buttons will be added here -->
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 Your Name or Company</p>
-    </footer>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <!-- First Row -->
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">←</button>
+
+            <!-- Second Row -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+
+            <!-- Third Row -->
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">*</button>
+
+            <!-- Fourth Row -->
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+
+            <!-- Fifth Row -->
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('+')">+</button>
+
+            <!-- Sixth Row -->
+            <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+            <button onclick="appendToDisplay('Math.pow(')">^</button>
+            <button onclick="appendToDisplay('Math.log(')">ln</button>
+            <button onclick="appendToDisplay('Math.sin(')">sin</button>
+
+            <!-- Seventh Row -->
+            <button onclick="appendToDisplay('Math.cos(')">cos</button>
+            <button onclick="appendToDisplay('Math.tan(')">tan</button>
+            <button onclick="appendToDisplay('Math.PI')">π</button>
+            <button onclick="appendToDisplay('Math.E')">e</button>
+        </div>
+    </div>
+
     <script src="js/calculator.js"></script>
 </body>
 </html>
