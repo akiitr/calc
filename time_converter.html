@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Zone Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+    <header>
+        <h1>Time Zone Converter</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="time-converter">
+            <div class="input-group">
+                <label for="fromTimeZone">From Time Zone:</label>
+                <select id="fromTimeZone">
+                    <!-- Time zone options will be added by script -->
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="toTimeZone">To Time Zone:</label>
+                <select id="toTimeZone">
+                    <!-- Time zone options will be added by script -->
+                </select>
+            </div>
+            <input type="datetime-local" id="timeToConvert">
+            <button id="convertTime">Convert Time</button>
+            <div id="timeResult"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Your Name or Company</p>
+    </footer>
+    <script src="js/time_converter.js"></script>
+</body>
+</html>
