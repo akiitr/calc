@@ -1,44 +1,296 @@
-/* General styles for the entire application */
+/* css/style.css */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --font-family: 'Roboto', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
 }
 
 nav ul {
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background: #333;
+    padding: 15px;
+    background: var(--secondary-color);
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .converter {
+        width: 90%;
+    }
+}
+
+/* css/converters.css */
+.converter {
+    background-color: #fff; /* Changed background color */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Slightly larger border-radius */
+    padding: 30px; /* Increased padding */
+    margin: 20px auto;
+    width: 90%; /* Adjusted width */
+    max-width: 600px; /* Increased max-width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.converter .input-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.converter label {
+    display: block;
+    margin-bottom: 8px; /* Adjusted margin */
+    color: var(--text-color); /* Use text color variable */
+}
+
+.converter input[type="number"],
+.converter select {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Adjusted border-radius */
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size */
+}
+
+.converter button {
+    padding: 12px 24px; /* Adjusted padding */
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-color); /* Use primary color variable */
+    border: none;
+    border-radius: 5px; /* Adjusted border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.converter button:hover {
+    background-color: #0056b3;
+}
+
+.converter #result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-color); /* Use text color variable */
+    font-weight: bold; /* Make result text bold */
+}
+
+/* css/utilities.css */
+.input-group {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Adjusted margin */
+    font-weight: normal; /* Reset font-weight if necessary */
+    color: var(--text-color); /* Use text color variable */
+}
+
+input[type="date"],
+input[type="datetime-local"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Adjusted border-radius */
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size */
+}
+
+button {
+    padding: 12px 24px; /* Adjusted padding */
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-color); /* Use primary color variable */
+    border: none;
+    border-radius: 5px; /* Adjusted border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#dateResult,
+#timeResult,
+#ageResult,
+#percentageResult,
+#loanResult,
+#currencyResult {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-color); /* Use text color variable */
+}
+
+/* css/calculator.css */
+.calculator {
+    width: 350px; /* Slightly wider */
+    margin: 50px auto;
+    border-radius: 10px; /* More rounded corners */
+    padding: 25px; /* Increased padding */
+    background-color: #f9f9f9; /* Lighter background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.calculator #display {
+    width: calc(100% - 20px);
+    margin-bottom: 20px; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    font-size: 24px; /* Larger font size */
+    text-align: right;
+    border: 1px solid #ccc; /* Slightly darker border */
+    border-radius: 8px; /* More rounded corners */
+    background-color: #fff; /* White display background */
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px; /* Increased gap */
+}
+
+.calculator button {
+    padding: 14px; /* Increased padding */
+    font-size: 20px; /* Larger font size */
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    background-color: #eee; /* Lighter button background */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Added transform transition */
+}
+
+.calculator button:hover {
+    background-color: #ddd; /* Slightly darker on hover */
+}
+
+.calculator button:active {
+    background-color: #ccc;
+    transform: scale(0.98); /* Added slight shrink on click */
+}
+
+/* You might want to add a class for operator buttons to distinguish them */
+.calculator .operator {
+    background-color: var(--secondary-color); /* Use secondary color */
+    color: white;
+}
+
+.calculator .operator:hover {
+    background-color: #5a6268; /* Darker shade of secondary color */
 }

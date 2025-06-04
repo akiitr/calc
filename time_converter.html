@@ -13,26 +13,30 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- Add more links as needed -->
+                <!-- Add more navigation links as needed -->
             </ul>
         </nav>
     </header>
     <main>
         <section class="time-converter">
+            <h2>Time Zone Converter</h2>
             <div class="input-group">
-                <label for="fromTimeZone">From Time Zone:</label>
-                <select id="fromTimeZone">
-                    <!-- Time zone options will be added by script -->
+                <label for="timeInput">Time:</label>
+                <input type="datetime-local" id="timeInput">
+            </div>
+            <div class="input-group">
+                <label for="fromZone">From Time Zone:</label>
+                <select id="fromZone">
+                    <!-- Options will be populated by JavaScript -->
                 </select>
             </div>
             <div class="input-group">
-                <label for="toTimeZone">To Time Zone:</label>
-                <select id="toTimeZone">
-                    <!-- Time zone options will be added by script -->
+                <label for="toZone">To Time Zone:</label>
+                <select id="toZone">
+                    <!-- Options will be populated by JavaScript -->
                 </select>
             </div>
-            <input type="datetime-local" id="timeToConvert">
-            <button id="convertTime">Convert Time</button>
+            <button id="convertTime">Convert</button>
             <div id="timeResult"></div>
         </section>
     </main>

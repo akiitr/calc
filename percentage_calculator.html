@@ -13,20 +13,55 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- Add more links as needed -->
+                <!-- Add more navigation links as needed -->
             </ul>
         </nav>
     </header>
     <main>
         <section class="percentage-calculator">
-            <div class="input-group">
-                <label for="percentage">Percentage:</label>
-                <input type="number" id="percentage">
-                <span>% of</span>
-                <input type="number" id="total">
+            <h2>Percentage Calculator</h2>
+
+            <div class="calculator-type" id="percentageOf">
+                <h3>Percentage of a Value</h3>
+                <div class="input-group">
+                    <label for="part">Part:</label>
+                    <input type="number" id="part">
+                </div>
+                <div class="input-group">
+                    <label for="total">Total:</label>
+                    <input type="number" id="total">
+                </div>
+                <button onclick="calculatePercentage()">Calculate Percentage</button>
+                <div id="percentageResult"></div>
             </div>
-            <button id="calculatePercentage">Calculate</button>
-            <div id="percentageResult"></div>
+
+            <div class="calculator-type" id="valueFromPercentage">
+                <h3>Value from Percentage</h3>
+                <div class="input-group">
+                    <label for="percentage">Percentage:</label>
+                    <input type="number" id="percentage">
+                </div>
+                <div class="input-group">
+                    <label for="ofValue">Of Value:</label>
+                    <input type="number" id="ofValue">
+                </div>
+                <button onclick="calculateValue()">Calculate Value</button>
+                <div id="valueResult"></div>
+            </div>
+
+            <div class="calculator-type" id="percentageChange">
+                <h3>Percentage Change</h3>
+                <div class="input-group">
+                    <label for="initialValue">Initial Value:</label>
+                    <input type="number" id="initialValue">
+                </div>
+                <div class="input-group">
+                    <label for="finalValue">Final Value:</label>
+                    <input type="number" id="finalValue">
+                </div>
+                <button onclick="calculateChange()">Calculate Change</button>
+                <div id="changeResult"></div>
+            </div>
         </section>
     </main>
     <footer>
